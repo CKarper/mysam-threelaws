@@ -11,6 +11,10 @@
     },
   "author": "Christopher Karper",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CKarper/mysam-threelaws.git"
+  },
   "keywords": [
     "threelaws",
     "asimov",
