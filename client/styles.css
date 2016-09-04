@@ -1,7 +1,9 @@
-.threelaws {
-  font-size: 4em;
+.mysam-threelaws {
+  font-size: 3em;
+  text-align: left;
 }
 
-.myplugin {
-  font-size: 4em;
+.mysam-threelaws ol li {
+  font-size: .5em;
 }
+

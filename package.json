@@ -5,23 +5,34 @@
   "main": "server/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "rm -rf dist/ && mkdir dist && npm run babel && cp client/styles.css dist",
+    "babel": "browserify client/laws.js -t babelify --outfile dist/laws.js --standalone MySam.ThreeLaws",
+    "prepublish": "npm run compile",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish"
-    },
+  },
   "author": "Christopher Karper",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:CKarper/mysam-threelaws.git"
-  },
   "keywords": [
     "threelaws",
     "asimov",
     "mysam-plugin"
   ],
   "mysam": {
-    "client": "client/laws",
-    "styles": "client/styles.css"
+    "client": "dist/laws",
+    "styles": "dist/styles.css"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0"
+  },
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CKarper/mysam-threelaws.git"
   }
 }
