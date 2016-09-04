@@ -1,6 +1,6 @@
 {
   "name": "mysam-threelaws",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It's important for AI, no matter how basic, to have limits",
   "main": "server/",
   "scripts": {
